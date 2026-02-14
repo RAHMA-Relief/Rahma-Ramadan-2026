@@ -115,3 +115,182 @@ footer{
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate – Rahma Ramadan 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:#f8fafc;
+  color:#1e293b;
+}
+
+nav{
+  background:#0f172a;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:500;
+}
+
+header{
+  text-align:center;
+  padding:80px 20px 40px;
+}
+
+header h1{
+  font-size:2.5rem;
+  margin:0;
+}
+
+section{
+  max-width:1100px;
+  margin:40px auto 80px;
+  padding:0 20px;
+}
+
+.donation-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.wallet{
+  font-size:0.85rem;
+  background:#f1f5f9;
+  padding:10px;
+  border-radius:8px;
+  word-break:break-all;
+  margin:15px 0;
+}
+
+button{
+  padding:10px 20px;
+  border:none;
+  border-radius:6px;
+  background:#0ea5e9;
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+}
+
+button:hover{
+  background:#0284c7;
+}
+
+.qr img{
+  width:130px;
+  margin-top:15px;
+}
+
+.notice{
+  margin-top:40px;
+  text-align:center;
+  font-weight:600;
+}
+
+footer{
+  background:#0f172a;
+  color:#cbd5e1;
+  text-align:center;
+  padding:40px 20px;
+}
+</style>
+
+<script>
+function copyWallet(id){
+  const text=document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
+  alert("Wallet address copied!");
+}
+</script>
+
+</head>
+
+<body>
+
+<nav>
+  <div style="color:white;font-weight:700;">Rahma</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="donate.html">Donate</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Make a Donation</h1>
+  <p>Choose your preferred network below</p>
+</header>
+
+<section>
+
+<div class="donation-grid">
+
+<div class="card">
+<h3>Bitcoin (BTC)</h3>
+<div class="wallet" id="btc">bc1qxem554hjgwv4cjrq6lwjf2enq3vf67dl4pa00q</div>
+<button onclick="copyWallet('btc')">Copy Address</button>
+<div class="qr"><img src="btc.png"></div>
+</div>
+
+<div class="card">
+<h3>Ethereum (ERC20)</h3>
+<div class="wallet" id="eth">0x718460B6129F3C8A406555cFB3D03240C441782A</div>
+<button onclick="copyWallet('eth')">Copy Address</button>
+<div class="qr"><img src="eth.png"></div>
+</div>
+
+<div class="card">
+<h3>USDT (TRC20)</h3>
+<div class="wallet" id="usdt">TLKzwmDrFDo8FebWdAvY2czJwcu2h7mexv</div>
+<button onclick="copyWallet('usdt')">Copy Address</button>
+<div class="qr"><img src="usdt.png"></div>
+</div>
+
+<div class="card">
+<h3>USDC (ERC20)</h3>
+<div class="wallet" id="usdc">0x718460B6129F3C8A406555cFB3D03240C441782A</div>
+<button onclick="copyWallet('usdc')">Copy Address</button>
+<div class="qr"><img src="usdc.png"></div>
+</div>
+
+</div>
+
+<p class="notice">⚠️ Please send funds using the correct network.</p>
+
+</section>
+
+<footer>
+<p>© 2026 Rahma Relief – Humanitarian Initiative</p>
+</footer>
+
+</body>
+</html>
+
