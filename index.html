@@ -5,202 +5,222 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rahma Ramadan 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
+body{
   margin:0;
-  font-family:'Poppins', sans-serif;
-  background:#f4f6f8;
-  color:#333;
-  line-height:1.6;
+  font-family:'Inter',sans-serif;
+  background:#f8fafc;
+  color:#1e293b;
 }
 
-header {
-  background:linear-gradient(135deg,#00897b,#00695c);
+header{
+  background:#0f172a;
   color:white;
+  padding:80px 20px;
   text-align:center;
-  padding:60px 20px;
 }
 
-header h1 {
+header h1{
+  font-size:2.5rem;
   margin:0;
-  font-size:2.2rem;
+  font-weight:700;
 }
 
-header p {
-  margin-top:10px;
+header p{
+  margin-top:15px;
   font-size:1.1rem;
+  color:#cbd5e1;
 }
 
-header a {
+header a{
   display:inline-block;
-  margin-top:20px;
-  padding:12px 25px;
-  background:#ffb300;
+  margin-top:25px;
+  padding:14px 30px;
+  background:#22c55e;
   color:white;
   text-decoration:none;
-  border-radius:30px;
-  font-weight:600;
-}
-
-section {
-  max-width:1000px;
-  margin:40px auto;
-  padding:30px;
-  background:white;
-  border-radius:10px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.05);
-}
-
-section h2 {
-  color:#00695c;
-  margin-bottom:20px;
-}
-
-ul {
-  padding-left:20px;
-}
-
-.donate-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  margin-top:20px;
-}
-
-.card {
-  border:1px solid #eee;
-  border-radius:10px;
-  padding:20px;
-  text-align:center;
-  background:#fafafa;
-}
-
-.wallet {
-  font-size:0.85rem;
-  word-break:break-all;
-  margin-top:10px;
-}
-
-.qr {
-  margin-top:15px;
-  height:120px;
-  background:#e0e0e0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   border-radius:8px;
-  font-size:0.8rem;
-  color:#666;
+  font-weight:600;
+  transition:0.3s;
 }
 
-footer {
-  background:#263238;
-  color:white;
+header a:hover{
+  background:#16a34a;
+}
+
+section{
+  max-width:1100px;
+  margin:60px auto;
+  padding:0 20px;
+}
+
+.section-box{
+  background:white;
+  padding:40px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+h2{
+  margin-bottom:20px;
+  font-size:1.8rem;
+}
+
+.donation-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+
+.card{
+  background:white;
+  border-radius:16px;
+  padding:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
   text-align:center;
-  padding:30px 20px;
-  margin-top:40px;
+  transition:0.3s;
 }
 
-footer a {
-  color:#ffb300;
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+.wallet{
+  font-size:0.85rem;
+  background:#f1f5f9;
+  padding:10px;
+  border-radius:8px;
+  word-break:break-all;
+  margin:15px 0;
+}
+
+button{
+  padding:10px 20px;
+  border:none;
+  border-radius:6px;
+  background:#0ea5e9;
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#0284c7;
+}
+
+.qr img{
+  width:140px;
+  margin-top:15px;
+}
+
+footer{
+  background:#0f172a;
+  color:#cbd5e1;
+  text-align:center;
+  padding:40px 20px;
+  margin-top:80px;
+}
+
+footer a{
+  color:#22c55e;
   text-decoration:none;
   margin:0 10px;
 }
 </style>
-</head>
 
+<script>
+function copyWallet(id){
+  const text=document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
+  alert("Wallet address copied!");
+}
+</script>
+
+</head>
 <body>
 
 <header>
   <h1>Rahma Ramadan 2026</h1>
-  <p>Supporting vulnerable families in Syria through transparent crypto donations</p>
+  <p>Secure & Transparent Crypto Donations for Families in Syria</p>
   <a href="#donate">Donate Now</a>
 </header>
 
-<section id="about">
-  <h2>About the Campaign</h2>
-  <p>Rahma is an independent humanitarian initiative dedicated to supporting vulnerable women, children, and disadvantaged families. This Ramadan campaign aims to provide urgent humanitarian assistance to families in need across Syria through transparent, crypto-based donations.</p>
-
-  <h3>🌍 Our Vision</h3>
-  <p>A better world for women and children — where every individual has access to dignity, opportunity, and the basic necessities of life.</p>
-
-  <h3>🎯 Our Mission</h3>
-  <p>To educate, empower, and support women and children so they can play an active and positive role in building stronger and healthier communities.</p>
-
-  <h3>🤝 Our Commitment</h3>
-  <ul>
-    <li>Ensuring access to essential needs such as food, clean water, shelter, healthcare, and sustainable development.</li>
-    <li>Respecting cultural diversity and local traditions.</li>
-    <li>Engaging community members in needs assessment, program design, and implementation.</li>
-    <li>Maintaining transparency and accountability in all humanitarian efforts.</li>
-  </ul>
-
-  <p><strong>We believe that every human being has the right to life’s basic necessities — regardless of gender, age, religion, or ethnicity.</strong></p>
-
-  <h3>🌙 Ramadan 2026 Campaign – Syria</h3>
-  <p>During the holy month of Ramadan, Rahma will provide:</p>
-  <ul>
-    <li>🍞 Food baskets for vulnerable families</li>
-    <li>🧃 Essential supplies for women and children</li>
-    <li>💊 Basic medical support where possible</li>
-  </ul>
-
-  <p>Our goal is to deliver direct, impactful assistance to those who need it most.</p>
+<section>
+<div class="section-box">
+<h2>About the Campaign</h2>
+<p>Rahma is an independent humanitarian initiative dedicated to supporting vulnerable women, children, and disadvantaged families in Syria during Ramadan 2026.</p>
+<p><strong>Our Mission:</strong> Deliver direct humanitarian support with full transparency and accountability.</p>
+</div>
 </section>
 
 <section id="donate">
-  <h2>💰 Crypto Donations Only</h2>
-  <p>We accept donations exclusively via cryptocurrency to ensure fast, secure, and borderless support.</p>
+<h2>Make a Donation</h2>
 
-  <div class="donate-grid">
+<div class="donation-cards">
 
-    <div class="card">
-      <h3>Bitcoin (BTC)</h3>
-      <div class="wallet">bc1qxem554hjgwv4cjrq6lwjf2enq3vf67dl4pa00q</div>
-      <div class="qr">QR Code Placeholder</div>
-    </div>
+<div class="card">
+<h3>Bitcoin (BTC)</h3>
+<div class="wallet" id="btc">bc1qxem554hjgwv4cjrq6lwjf2enq3vf67dl4pa00q</div>
+<button onclick="copyWallet('btc')">Copy Address</button>
+<div class="qr">
+<img src="btc.png" alt="BTC QR">
+</div>
+</div>
 
-    <div class="card">
-      <h3>Ethereum (ERC20)</h3>
-      <div class="wallet">0x718460B6129F3C8A406555cFB3D03240C441782A</div>
-      <div class="qr">QR Code Placeholder</div>
-    </div>
+<div class="card">
+<h3>Ethereum (ERC20)</h3>
+<div class="wallet" id="eth">0x718460B6129F3C8A406555cFB3D03240C441782A</div>
+<button onclick="copyWallet('eth')">Copy Address</button>
+<div class="qr">
+<img src="eth.png" alt="ETH QR">
+</div>
+</div>
 
-    <div class="card">
-      <h3>USDT (TRC20)</h3>
-      <div class="wallet">TLKzwmDrFDo8FebWdAvY2czJwcu2h7mexv</div>
-      <div class="qr">QR Code Placeholder</div>
-    </div>
+<div class="card">
+<h3>USDT (TRC20)</h3>
+<div class="wallet" id="usdt">TLKzwmDrFDo8FebWdAvY2czJwcu2h7mexv</div>
+<button onclick="copyWallet('usdt')">Copy Address</button>
+<div class="qr">
+<img src="usdt.png" alt="USDT QR">
+</div>
+</div>
 
-    <div class="card">
-      <h3>USDC (ERC20)</h3>
-      <div class="wallet">0x718460B6129F3C8A406555cFB3D03240C441782A</div>
-      <div class="qr">QR Code Placeholder</div>
-    </div>
+<div class="card">
+<h3>USDC (ERC20)</h3>
+<div class="wallet" id="usdc">0x718460B6129F3C8A406555cFB3D03240C441782A</div>
+<button onclick="copyWallet('usdc')">Copy Address</button>
+<div class="qr">
+<img src="usdc.png" alt="USDC QR">
+</div>
+</div>
 
-  </div>
+</div>
 
-  <p style="margin-top:20px;"><strong>⚠️ Please ensure you send funds using the correct network.</strong></p>
+<p style="margin-top:25px;"><strong>⚠️ Please send funds using the correct network.</strong></p>
 </section>
 
-<section id="transparency">
-  <h2>🔎 Transparency & Accountability</h2>
-  <p>All transactions are publicly verifiable on the blockchain. Regular updates and distribution reports will be published. Major donations may be acknowledged publicly (with donor consent). Funds will be used exclusively for humanitarian purposes related to this campaign.</p>
-</section>
-
-<section id="contact">
-  <h2>📢 Updates & Contact</h2>
-  <p>
-    <a href="http://linkedin.com/company/mwlimitstr" target="_blank">LinkedIn</a> |
-    <a href="https://stm-dernegi.org/en/about/" target="_blank">Website</a> |
-    <a href="https://www.instagram.com/stm_dernegi" target="_blank">Instagram</a>
-  </p>
+<section>
+<div class="section-box">
+<h2>Transparency</h2>
+<p>All donations are verifiable on the blockchain. Regular updates and distribution reports will be published publicly.</p>
+</div>
 </section>
 
 <footer>
-  <p>© 2026 Rahma Relief – All Rights Reserved</p>
+<p>© 2026 Rahma Relief – Humanitarian Initiative</p>
+<p>
+<a href="http://linkedin.com/company/mwlimitstr" target="_blank">LinkedIn</a> |
+<a href="https://stm-dernegi.org/en/about/" target="_blank">Website</a> |
+<a href="https://www.instagram.com/stm_dernegi" target="_blank">Instagram</a>
+</p>
 </footer>
 
 </body>
