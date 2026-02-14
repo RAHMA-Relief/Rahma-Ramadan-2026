@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahma – Ramadan 2026 Campaign</title>
+
+<style>
+:root {
+--primary:#0d3b66;
+--accent:#2a9d8f;
+--gold:#f4a261;
+--light:#f4f7fa;
+--white:#ffffff;
+--text:#1f2933;
+}
+
+body{
+font-family:"Segoe UI",sans-serif;
+background:var(--light);
+margin:0;
+color:var(--text);
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+padding:60px 0;
+}
+
+.hero{
+background:linear-gradient(135deg,var(--primary),var(--accent));
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{font-size:40px;margin-bottom:20px;}
+
+.donate-btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:var(--gold);
+color:#000;
+font-weight:bold;
+border-radius:50px;
+text-decoration:none;
+}
+
+.section{
+background:white;
+margin-top:30px;
+padding:50px;
+border-radius:10px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+
+.section h2{
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.wallet{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:20px;
+margin-bottom:30px;
+background:#fafafa;
+}
+
+.wallet-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.wallet-address{
+word-break:break-all;
+font-family:monospace;
+margin:10px 0;
+}
+
+.copy-btn{
+background:var(--accent);
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.copy-btn:hover{opacity:0.85;}
+
+.qr{
+margin-top:15px;
+}
+
+.success{
+color:green;
+font-size:14px;
+margin-top:5px;
+display:none;
+}
+
+.footer{
+background:var(--primary);
+color:white;
+text-align:center;
+padding:40px;
+margin-top:60px;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:28px;}
+.section{padding:30px;}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<h1>Ramadan 2026 Campaign – Syria</h1>
+<p>Your support provides food and dignity to vulnerable families.</p>
+<a href="#donate" class="donate-btn">Donate Now</a>
+</section>
+
+<div class="container">
+
+<div class="section" id="donate">
+<h2>💰 Donate via Cryptocurrency</h2>
+<p>Select your preferred network, copy the address or scan the QR code.</p>
+
+<!-- BTC -->
+<div class="wallet">
+<div class="wallet-header">
+<strong>BTC (Bitcoin Network)</strong>
+<button class="copy-btn" onclick="copyText('btc')">Copy</button>
+</div>
+<div id="btc" class="wallet-address">
+bc1qxem554hjgwv4cjrq6lwjf2enq3vf67dl4pa00q
+</div>
+<div class="success" id="btc-msg">Address Copied ✔</div>
+<img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bc1qxem554hjgwv4cjrq6lwjf2enq3vf67dl4pa00q">
+</div>
+
+<!-- ETH -->
+<div class="wallet">
+<div class="wallet-header">
+<strong>ETH / USDC (ERC20 Network)</strong>
+<button class="copy-btn" onclick="copyText('eth')">Copy</button>
+</div>
+<div id="eth" class="wallet-address">
+0x718460B6129F3C8A406555cFB3D03240C441782A
+</div>
+<div class="success" id="eth-msg">Address Copied ✔</div>
+<img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x718460B6129F3C8A406555cFB3D03240C441782A">
+</div>
+
+<!-- USDT TRC20 -->
+<div class="wallet">
+<div class="wallet-header">
+<strong>USDT (TRC20 Network)</strong>
+<button class="copy-btn" onclick="copyText('usdt')">Copy</button>
+</div>
+<div id="usdt" class="wallet-address">
+TLKzwmDrFDo8FebWdAvY2czJwcu2h7mexv
+</div>
+<div class="success" id="usdt-msg">Address Copied ✔</div>
+<img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=TLKzwmDrFDo8FebWdAvY2czJwcu2h7mexv">
+</div>
+
+</div>
+
+</div>
+
+<footer class="footer">
+<p>Transparency • Accountability • Direct Impact</p>
+</footer>
+
+<script>
+function copyText(id){
+const text = document.getElementById(id).innerText;
+navigator.clipboard.writeText(text);
+const msg = document.getElementById(id + "-msg");
+msg.style.display = "block";
+setTimeout(() => {
+msg.style.display = "none";
+}, 2000);
+}
+</script>
+
+</body>
+</html>
